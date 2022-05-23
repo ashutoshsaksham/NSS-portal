@@ -1,0 +1,24 @@
+{% extends 'portal/basic.html' %}
+{% block title %} Activities of {% endblock %}
+{% block body %}
+
+
+
+
+{% for activity in activity_name %}
+
+        <div class="row d-flex p-4 bd-highlight">
+            <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{ activity.activity_name }}</h5>
+                <h5 class="card-title">{{ activity.activity_ngo }}</h5>
+                <p class="card-text">{{ activity.activity_desc }}</p>
+
+                <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+
+{% endfor %}
+{% endblock %}

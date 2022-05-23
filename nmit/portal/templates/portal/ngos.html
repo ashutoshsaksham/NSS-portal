@@ -1,0 +1,18 @@
+{% extends 'portal/basic.html' %}
+{% block title %} Title of about {% endblock %}
+{% block body %}
+
+
+{% for ngo in ngo_no %}
+
+  <div class="card d-inline-flex p-2 bd-highlight " style="width: 18rem; ">
+    <div class="card-body">
+      <h5 class="card-title">{{ ngo.ngo_name }}</h5>
+      <p class="card-text">{{ ngo.desc }}
+      </p>
+      <a href="/ngo/{{ngo.ngo_id}}" class="btn btn-primary">See Activities</a>
+    </div>
+  </div>
+
+{% endfor %}
+{% endblock %}
